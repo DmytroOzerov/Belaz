@@ -54,8 +54,8 @@
             <div class="price__items-main-text">
                     Получите прайс прямо сейчас<br>на электронную почту!
             </div>
-            <form class="price__items-input" id="send-price" method="GET" action="#">
-                <input type="email" name="email" placeholder="Введите ваш e-mail" class="price__items-input1">
+            <form class="price__items-input" id="send-price" method="POST" action="#">
+                <input type="email" name="email" placeholder="Введите ваш e-mail" class="price__items-input1" required>
                 <input type="tel" name="tel" placeholder="Введите ваш телефон" class="price__items-input2" required pattern="^\+7\d{10}">
             </form>
             <div class="price__items-second-text">Прайс придет к Вам на почту<br>в течение 5 минут!
@@ -92,9 +92,9 @@
             <div class="price-copy__elements">
                     <p class="price-copy__elements-head">Ищете конкретную деталь?</p>
                     <p class="price-copy__elements-title">Если у Вас есть артикул - введите его в поле ниже и получите цену<br>ПРЯМО СЕЙЧАС!<br></p>
-                    <form class="price-copy__inputs" id="price-copy" method="GET" action="#">
-                            <input type="email" name="email" placeholder="Введите ваш e-mail" class="price-copy__input1">
-                            <input type="tel" name="tel" placeholder="Введите ваш телефон" class="price-copy__input2">
+                    <form class="price-copy__inputs" id="price-copy" method="post" action="#">
+                            <input type="email" name="email" placeholder="Введите ваш e-mail" class="price-copy__input1" required>
+                            <input type="tel" name="tel" placeholder="Введите ваш телефон" class="price-copy__input2" required>
                     </form>
                     <button class="price-copy__button" type="submit" value="Получить прайс" form="price-copy">Узнать цену</button>
                     <div class="price-copy__elements-foot">
@@ -181,8 +181,8 @@
         <p class="consultation-title">Если Вам необходима бесплатная консультация по вопросу обслуживания</p>
         <h3 class="consultation-call">Звоните нам по телефону:</h3>
         <p class="consultation-phone"> +7 (818) 247-47-25</p>
-        <form action="#" id="consult" method="GET">
-                <input type="tel" name="tel" value="Введите ваш телефон" class="consultation-input">
+        <form action="#" id="consult" method="POST">
+                <input type="tel" name="tel" value="Введите ваш телефон" class="consultation-input" required>
         </form>        
         <button class="consultation-button" type="submit" value="Получить прайс" form="consult">Узнать цену</button>
     </div>
