@@ -94,7 +94,7 @@
                     <p class="price-copy__elements-title">Если у Вас есть артикул - введите его в поле ниже и получите цену<br>ПРЯМО СЕЙЧАС!<br></p>
                     <form class="price-copy__inputs" id="price-copy" method="post" action="#">
                             <input type="email" name="email" placeholder="Введите ваш e-mail" class="price-copy__input1" required>
-                            <input type="tel" name="tel" placeholder="Введите ваш телефон" class="price-copy__input2" required>
+                            <input type="tel" name="tel" placeholder="Введите ваш телефон" class="price-copy__input2" required pattern="^\+7\d{10}">
                     </form>
                     <button class="price-copy__button" type="submit" value="Получить прайс" form="price-copy">Узнать цену</button>
                     <div class="price-copy__elements-foot">
@@ -182,7 +182,7 @@
         <h3 class="consultation-call">Звоните нам по телефону:</h3>
         <p class="consultation-phone"> +7 (818) 247-47-25</p>
         <form action="#" id="consult" method="POST">
-                <input type="tel" name="tel" value="Введите ваш телефон" class="consultation-input" required>
+                <input type="tel" name="tel" value="Введите ваш телефон" class="consultation-input" required pattern="^\+7\d{10}">
         </form>        
         <button class="consultation-button" type="submit" value="Получить прайс" form="consult">Узнать цену</button>
     </div>
