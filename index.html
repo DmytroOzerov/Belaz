@@ -11,11 +11,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
+    
     <header>
         <img src="img/head/logo.png" alt="Eddies Car" class="header header__img">
         <div class="header header__worktime"><p>c 9:00 до 21:00<br>без выходных</p></div>
         <div class="header header__number">+7(818) 247-47-25<br>+7(818) 247-47-25</div>
-        <button type="button" name="callback.btn" value="Заказать звонок" class="header__callback">Заказать звонок</button>
+        <button type="button" name="callback.btn" value="Заказать звонок" class="header__callback" onclick="javascript:PopUpShow()">Заказать звонок</button>
+        <form action="#" class="callback-form" id="my_form">
+            <input type="text" placeholder="Ваше имя" required><br>
+            <input type="tel" name="tel"  required pattern="^\+7\d{10}" placeholder="+7xxxxxxxxxx"><br>
+            <textarea rows="5" cols="37" name="text" wrap="hard" placeholder="Оставьте комментарий"></textarea><br>
+            <input type="submit">
+            <input type="button" value="Закрыть" onclick="javascript:PopUpHide()">
+        </form>
     </header>
     <div class="main">
         <div class="main__img">
@@ -36,7 +44,7 @@
                 <p class="deliver__item-text3">Даем рассрочку<br>6 месяцев</p>
                 <p class="deliver__item-text4">Даем гарантию<br>от 12 месяцев</p>
             </div>
-        </div>        
+        </div>
     </div>
     <div class="price">
         <div class="price__img">
@@ -46,15 +54,14 @@
             <div class="price__items-main-text">
                     Получите прайс прямо сейчас<br>на электронную почту!
             </div>
-            <div class="price__items-input">
-                <input type="email" name="email" value="Введите ваш e-mail" class="price__items-input1">
-                <input type="tel" name="tel" value="Введите ваш телефон" class="price__items-input2">
-            </div>
+            <form class="price__items-input" id="send-price" method="GET" action="#">
+                <input type="email" name="email" placeholder="Введите ваш e-mail" class="price__items-input1">
+                <input type="tel" name="tel" placeholder="Введите ваш телефон" class="price__items-input2" required pattern="^\+7\d{10}">
+            </form>
             <div class="price__items-second-text">Прайс придет к Вам на почту<br>в течение 5 минут!
             </div>
             <img src="img/price_img/clock_(12).png" alt="Clock" class="price__clock">
-            <div class="price__items-button">Получить прайс
-            </div>
+            <button class="price__items-button" type="submit" value="Получить прайс" form="send-price">Получить прайс</button>
         </div>
     </div>
     <div class="container__dont-wait">
@@ -85,11 +92,11 @@
             <div class="price-copy__elements">
                     <p class="price-copy__elements-head">Ищете конкретную деталь?</p>
                     <p class="price-copy__elements-title">Если у Вас есть артикул - введите его в поле ниже и получите цену<br>ПРЯМО СЕЙЧАС!<br></p>
-                    <div class="price-copy__inputs">
-                            <input type="email" name="email" value="Введите ваш e-mail" class="price-copy__input1">
-                            <input type="tel" name="tel" value="Введите ваш телефон" class="price-copy__input2">
-                    </div>
-                    <div class="price-copy__button">Узнать цену</div>
+                    <form class="price-copy__inputs" id="price-copy" method="GET" action="#">
+                            <input type="email" name="email" placeholder="Введите ваш e-mail" class="price-copy__input1">
+                            <input type="tel" name="tel" placeholder="Введите ваш телефон" class="price-copy__input2">
+                    </form>
+                    <button class="price-copy__button" type="submit" value="Получить прайс" form="price-copy">Узнать цену</button>
                     <div class="price-copy__elements-foot">
                             <h5 class="price-copy__elements-callback">Мы перезвоним вам в течение 3 минут и назовем цену детали!</h5>
                             <h5 class="price-copy__elements-">Или Вы можете перезвонить нам сами:</h5>
@@ -174,9 +181,10 @@
         <p class="consultation-title">Если Вам необходима бесплатная консультация по вопросу обслуживания</p>
         <h3 class="consultation-call">Звоните нам по телефону:</h3>
         <p class="consultation-phone"> +7 (818) 247-47-25</p>
-
-        <input type="tel" name="tel" value="Введите ваш телефон" class="consultation-input">
-        <div class="consultation-button">Узнать цену</div>
+        <form action="#" id="consult" method="GET">
+                <input type="tel" name="tel" value="Введите ваш телефон" class="consultation-input">
+        </form>        
+        <button class="consultation-button" type="submit" value="Получить прайс" form="consult">Узнать цену</button>
     </div>
     <div class="office">
         <img src="img/office/office_img.png" alt="Belaz" class="office-img">
@@ -197,5 +205,6 @@
 
 
     <script src="js/script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </body>
 </html>

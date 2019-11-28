@@ -10,9 +10,11 @@ body{
 header{
     width: 1920px;
     height: 100px;
-    position: absolute;
+    position: fixed;
     align-items: center;
     margin: 0;
+    background-color: black;
+    z-index: 1;
 }
 .header__img{
     position: absolute;
@@ -46,22 +48,46 @@ header{
     border: none;
     padding: 0;
 }
-.header__callback:hover{
-    background: #333;
-    transition: all .3s linear;
+.callback-form{
+    width: 300px;
+    height: 300px;
+    padding: 10px;
+    background-color: #c5c5c5;
+    border-radius:5px;
+    box-shadow: 0px 0px 10px #000;
+    right: 375px;
+    top: 100px;
+    display: none;
+    position: absolute;
+}
+form>input{
+    margin-bottom: 10px;
+    width: 300px;
+    height: 40px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    border: none;
+    padding: 0;
+}
+form>textarea{
+    width: 300px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    border: none;
+    padding: 0;
 }
 .main{
     position: absolute;
     width: 1920px;
-    height: 960px;}
+    height: 860px;
+    top: 100px;
+}
 .main__img{
     position: absolute;
-    top: 100px;
     z-index: -1;
 }
 .deliver{
     left: 375px;
-    top: 100px;
     width: 570px;
     height: 860px;
     background-color: #e6b331;
@@ -203,6 +229,7 @@ header{
     right: 0;
     top: 222px;
     position: absolute;
+    border: none;
 }
 .container__dont-wait{
     width: 1920px;
@@ -345,6 +372,7 @@ header{
     position: absolute;
     left: 800px;
     top: 154px;
+    border: none;
 }
 .price-copy__elements-foot{
     position: absolute;
@@ -801,6 +829,7 @@ header{
     position: absolute;
     left: 974px;
     top: 301px;
+    border: none;
 }
 .office{
     position: absolute;
