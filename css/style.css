@@ -11,7 +11,6 @@ header{
     width: 1920px;
     height: 100px;
     position: fixed;
-    align-items: center;
     margin: 0;
     background-color: black;
     z-index: 1;
@@ -62,15 +61,17 @@ header{
 }
 form>input{
     margin-bottom: 10px;
-    width: 300px;
-    height: 40px;
+    width: 100%;
+    height: 14%;
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
     border: none;
     padding: 0;
 }
 form>textarea{
-    width: 300px;
+    margin-bottom: 10px;
+    width: 100%;
+    height: 30%;
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     border: none;
