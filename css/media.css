@@ -1,5 +1,13 @@
-@media screen and (max-width: 1024px) { 
-    header { 
-        width: 1024px;
-    } 
-}
+/* @media screen and (max-width: 1024px) { 
+    .header { 
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        height: 200px;
+    }
+    .header__img{
+        display: block;
+        left: 0;
+        
+    }
+} */
